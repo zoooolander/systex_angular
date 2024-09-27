@@ -1,0 +1,19 @@
+<p>{{ title }}</p>
+<div>
+  Month:
+  <select (change)="changeMonths($event)">
+    <option *ngFor="let m of months">{{ m }}</option></select
+  >{{ monthSelected }}
+</div>
+<div>
+  <span *ngIf="isAvaliable; then condition1; else condition2"></span>
+  <ng-template #condition1>Condition is valid</ng-template>
+  <ng-template #condition2>Condition is invalid</ng-template>
+</div>
+<button (click)="myClickFunction($event)">Click Me</button>
+<div>{{ todayDate }}</div>
+<div>{{ todayDate | date : "d/m/y" }}</div>
+<div>{{ todayDate | date : "shortTime" }}</div>
+<div>{{ todayDate | date : "mediumTime" }}</div>
+<div>{{ todayDate | date : "longTime" }}</div>
+<div>Square root of is: {{ 25 | sqrt }}</div>
